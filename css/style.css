@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 } 
 
 :root{
@@ -243,6 +244,14 @@ footer>section{
 
 .n-playing-text>*{
     display: block;
+}
+
+.n-playing-text>span:hover{
+    color: white;
+}
+
+.span-underline:hover{
+    text-decoration: underline;
 }
 
 .n-playing-text>span, .settings>i{
