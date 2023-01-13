@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 } 
 
 :root{
@@ -47,6 +46,21 @@ header{
     
 }
 
+.upgrade-button{
+    padding: 10px 30px;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid var(--LightGrey);
+    display: inline-block;
+    align-self: center;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.upgrade-button:hover{
+    transform: scale(1.10);
+}
+
 /* FOOTER */
 
 footer{
@@ -60,21 +74,9 @@ footer{
     overflow-x: hidden;
 }
 
-.upgrade-button{
-    padding: 10px 30px;
-    color: white;
-    border-radius: 20px;
-    border: 1px solid var(--LightGrey);
-    display: inline-block;
-    align-self: center;
-    margin-right: 20px;
-    text-transform: uppercase;
-}
-
 footer>section{
     height: 100%;
 }
-
 
 .footer-container{
     display: flex;
@@ -85,6 +87,37 @@ footer>section{
 }
 
 
+/* SEZIONE BRANO */
+
+.now-playing{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 20px;
+    width: 300px;
+}
+
+.now-playing>img{
+    width: 15%;
+    max-width: 90px;
+    min-width: 40px;
+}
+
+.n-playing-text>*{
+    display: block;
+}
+
+.n-playing-text>span, .settings>i{
+    color: var(--LightGrey);
+}
+
+.playing-icons>i{
+    color: var(--LightGrey);
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* SEZIONE CONTROLLO PLAYER */
 
 .player{
     display: flex;
@@ -95,7 +128,6 @@ footer>section{
     width: 60%;
 }
 
-
 .player-top{
     display: flex;
     gap: 15px;
@@ -105,6 +137,124 @@ footer>section{
 
 .player-top>i{
     font-size: 23px;
+    color: white;
+}
+
+.color-white, .hover-color-white:hover{
+    color: white;
+}
+
+.hover-color-white:hover{
+    cursor: pointer;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px;
+    width: 60%;
+}
+
+.player-top{
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+    flex-shrink: 1;
+}
+
+.player-top>i{
+    font-size: 25px;
+    color: white;
+}
+
+.player-bot{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.player-bot>span{
+    color: white;
+}
+
+.player-bar{
+    width: 35vw;
+    height: 0.5rem;
+    border-radius: 10px;
+    background-color: var(--LightGrey);
+    position: relative;
+}
+
+.player-bar-active{
+    width: 10vw;
+    height: 0.5rem;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+}
+
+.player-bar:hover .player-bar-active{
+    background-color: var(--Green);
+}
+
+.player-bar:hover .player-bar-active::after{
+    display: block;
+}
+
+/* SEZIONE VOLUME */
+
+.active-volume::after, .player-bar-active::after{
+    content: "";
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background-color: white;
+    display: none;
+    position: absolute;
+    right: -5px;
+    transform: translateY(-4px);
+}
+
+.volume:hover .active-volume{
+    background-color: var(--Green);
+}
+
+.volume:hover .active-volume::after{
+    display: block;
+}
+
+.settings{
+    display: flex;
+    gap: 15px;
+    padding-right: 20px;
+    align-items: center;
+    width: 20%;
+    justify-content: flex-end;
+    width: 300px;
+}
+
+.volume{
+    width: 8vw;
+    background-color: var(--LightGrey);
+    height: 0.4rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.active-volume{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2vw;
+    height: 0.4rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.settings>i{
     color: white;
 }
 
