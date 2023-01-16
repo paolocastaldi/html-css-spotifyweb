@@ -200,6 +200,75 @@ header{
     margin: 10px 0;
 }
 
+/* PAD CATEGORIE PRINCIPALI */
+
+.pad-bot-top{
+    padding: 20px 0;
+}
+
+.pad-bot{
+    padding-bottom: 20px;
+}
+
+.main-nav{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    line-height: 40px;
+}
+
+.main-nav li a{
+    text-decoration: none;
+    color: var(--LightGrey);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main-nav li a:hover{
+    color: white;
+}
+
+.main-nav li a:hover::after{
+    visibility: visible;
+}
+
+.active-nav{
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    display: block;
+    z-index: 99;
+    background-color: var(--Green);
+}
+
+.main-nav li a::after{
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    display: block;
+    z-index: 99;
+    background-color: var(--Green);
+    visibility: hidden;
+    content: "";
+    position: absolute;
+    
+}
+
 /* FOOTER */
 
 footer{
@@ -309,11 +378,6 @@ footer>section{
     gap: 15px;
     justify-content: space-around;
     flex-shrink: 1;
-}
-
-.player-top>i{
-    font-size: 25px;
-    color: white;
 }
 
 .player-bot{
