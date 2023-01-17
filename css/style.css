@@ -333,13 +333,24 @@ main>section>h2{
     margin-left: 10px;
     font-weight: 800;
     color: white;
+    
 }
 
 main>section>span{
     font-size: .8rem;
     margin-bottom: 20px;
     display: block;
+    color: var(--LightGrey);
+    font-weight: bold;
 }
+
+
+/* SEZIONE ARTISTI PIù POPOLARI */
+
+.crop{
+    border-radius: 50%;
+}
+
 
 
 /* FOOTER */
@@ -666,5 +677,21 @@ footer>section{
 
     .now-playing{
         gap: 10px;
+    }
+
+    .card{
+        width: calc(100% / 4 - 15px);
+    } 
+
+}
+
+@media all and (max-width: 701px){
+    
+    .card{
+        width: calc(100% / 2 - 15px);
+    } 
+
+    .player-bot>span{
+        font-size: .8rem;
     }
 }
